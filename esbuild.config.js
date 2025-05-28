@@ -1,13 +1,11 @@
 require('esbuild').build({
-  entryPoints: ['widget.js', 'components/MyWidget.js'],
+  entryPoints: ['widget.js'],
   bundle: true,
-  outdir: 'dist',
-  minify: true,          // minify for smaller file size
-  sourcemap: false,      // no source map for production (optional)
-  loader: {
-    '.js': 'jsx',
-  },
+  outfile: 'dist/widget.js',
+  loader: { '.js': 'jsx' },
   define: {
-    'process.env.NODE_ENV': '"production"',  // useful if your code uses this
-  },
+    'process.env.NODE_ENV': '"production"',
+    'process.env': '{}',              // fallback
+    'process': '{}',                  // avoid "process is not defined"
+  }
 }).catch(() => process.exit(1));
