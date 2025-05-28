@@ -37,10 +37,8 @@
   });
 
   // <define:process.env>
-  var define_process_env_default;
   var init_define_process_env = __esm({
     "<define:process.env>"() {
-      define_process_env_default = {};
     }
   });
 
@@ -801,7 +799,7 @@
       "use strict";
       init_define_process();
       init_define_process_env();
-      var React3 = require_react();
+      var React5 = require_react();
       function formatProdErrorMessage(code) {
         var url = "https://react.dev/errors/" + code;
         if (1 < arguments.length) {
@@ -841,7 +839,7 @@
           implementation
         };
       }
-      var ReactSharedInternals = React3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       function getCrossOriginStringAs(as, input) {
         if ("font" === as) return "";
         if ("string" === typeof input)
@@ -981,7 +979,7 @@
       init_define_process();
       init_define_process_env();
       var Scheduler = require_scheduler();
-      var React3 = require_react();
+      var React5 = require_react();
       var ReactDOM2 = require_react_dom();
       function formatProdErrorMessage(code) {
         var url = "https://react.dev/errors/" + code;
@@ -1169,7 +1167,7 @@
         return null;
       }
       var isArrayImpl = Array.isArray;
-      var ReactSharedInternals = React3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       var ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       var sharedNotPendingObject = {
         pending: false,
@@ -12161,7 +12159,7 @@
           0 === i && attemptExplicitHydrationTarget(target);
         }
       };
-      var isomorphicReactPackageVersion$jscomp$inline_1785 = React3.version;
+      var isomorphicReactPackageVersion$jscomp$inline_1785 = React5.version;
       if ("19.1.0" !== isomorphicReactPackageVersion$jscomp$inline_1785)
         throw Error(
           formatProdErrorMessage(
@@ -12288,1767 +12286,270 @@
     }
   });
 
-  // node_modules/@swc/helpers/cjs/_interop_require_default.cjs
-  var require_interop_require_default = __commonJS({
-    "node_modules/@swc/helpers/cjs/_interop_require_default.cjs"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      function _interop_require_default(obj) {
-        return obj && obj.__esModule ? obj : { default: obj };
-      }
-      exports._ = _interop_require_default;
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/utils/warn-once.js
-  var require_warn_once = __commonJS({
-    "node_modules/next/dist/shared/lib/utils/warn-once.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "warnOnce", {
-        enumerable: true,
-        get: function() {
-          return warnOnce;
-        }
-      });
-      var warnOnce = (_) => {
-      };
-      if (false) {
-        const warnings = /* @__PURE__ */ new Set();
-        warnOnce = (msg) => {
-          if (!warnings.has(msg)) {
-            console.warn(msg);
-          }
-          warnings.add(msg);
-        };
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/image-blur-svg.js
-  var require_image_blur_svg = __commonJS({
-    "node_modules/next/dist/shared/lib/image-blur-svg.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "getImageBlurSvg", {
-        enumerable: true,
-        get: function() {
-          return getImageBlurSvg;
-        }
-      });
-      function getImageBlurSvg(param) {
-        let { widthInt, heightInt, blurWidth, blurHeight, blurDataURL, objectFit } = param;
-        const std = 20;
-        const svgWidth = blurWidth ? blurWidth * 40 : widthInt;
-        const svgHeight = blurHeight ? blurHeight * 40 : heightInt;
-        const viewBox = svgWidth && svgHeight ? "viewBox='0 0 " + svgWidth + " " + svgHeight + "'" : "";
-        const preserveAspectRatio = viewBox ? "none" : objectFit === "contain" ? "xMidYMid" : objectFit === "cover" ? "xMidYMid slice" : "none";
-        return "%3Csvg xmlns='http://www.w3.org/2000/svg' " + viewBox + "%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='" + std + "'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='" + std + "'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='" + preserveAspectRatio + "' style='filter: url(%23b);' href='" + blurDataURL + "'/%3E%3C/svg%3E";
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/image-config.js
-  var require_image_config = __commonJS({
-    "node_modules/next/dist/shared/lib/image-config.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      function _export(target, all) {
-        for (var name in all) Object.defineProperty(target, name, {
-          enumerable: true,
-          get: all[name]
-        });
-      }
-      _export(exports, {
-        VALID_LOADERS: function() {
-          return VALID_LOADERS;
-        },
-        imageConfigDefault: function() {
-          return imageConfigDefault;
-        }
-      });
-      var VALID_LOADERS = [
-        "default",
-        "imgix",
-        "cloudinary",
-        "akamai",
-        "custom"
-      ];
-      var imageConfigDefault = {
-        deviceSizes: [
-          640,
-          750,
-          828,
-          1080,
-          1200,
-          1920,
-          2048,
-          3840
-        ],
-        imageSizes: [
-          16,
-          32,
-          48,
-          64,
-          96,
-          128,
-          256,
-          384
-        ],
-        path: "/_next/image",
-        loader: "default",
-        loaderFile: "",
-        domains: [],
-        disableStaticImages: false,
-        minimumCacheTTL: 60,
-        formats: [
-          "image/webp"
-        ],
-        dangerouslyAllowSVG: false,
-        contentSecurityPolicy: "script-src 'none'; frame-src 'none'; sandbox;",
-        contentDispositionType: "attachment",
-        localPatterns: void 0,
-        remotePatterns: [],
-        qualities: void 0,
-        unoptimized: false
-      };
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/get-img-props.js
-  var require_get_img_props = __commonJS({
-    "node_modules/next/dist/shared/lib/get-img-props.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "getImgProps", {
-        enumerable: true,
-        get: function() {
-          return getImgProps;
-        }
-      });
-      var _warnonce = require_warn_once();
-      var _imageblursvg = require_image_blur_svg();
-      var _imageconfig = require_image_config();
-      var INVALID_BACKGROUND_SIZE_VALUES = [
-        "-moz-initial",
-        "fill",
-        "none",
-        "scale-down",
-        void 0
-      ];
-      function isStaticRequire(src) {
-        return src.default !== void 0;
-      }
-      function isStaticImageData(src) {
-        return src.src !== void 0;
-      }
-      function isStaticImport(src) {
-        return !!src && typeof src === "object" && (isStaticRequire(src) || isStaticImageData(src));
-      }
-      function getInt(x) {
-        if (typeof x === "undefined") {
-          return x;
-        }
-        if (typeof x === "number") {
-          return Number.isFinite(x) ? x : NaN;
-        }
-        if (typeof x === "string" && /^[0-9]+$/.test(x)) {
-          return parseInt(x, 10);
-        }
-        return NaN;
-      }
-      function getWidths(param, width, sizes) {
-        let { deviceSizes, allSizes } = param;
-        if (sizes) {
-          const viewportWidthRe = /(^|\s)(1?\d?\d)vw/g;
-          const percentSizes = [];
-          for (let match; match = viewportWidthRe.exec(sizes); match) {
-            percentSizes.push(parseInt(match[2]));
-          }
-          if (percentSizes.length) {
-            const smallestRatio = Math.min(...percentSizes) * 0.01;
-            return {
-              widths: allSizes.filter((s) => s >= deviceSizes[0] * smallestRatio),
-              kind: "w"
-            };
-          }
-          return {
-            widths: allSizes,
-            kind: "w"
-          };
-        }
-        if (typeof width !== "number") {
-          return {
-            widths: deviceSizes,
-            kind: "w"
-          };
-        }
-        const widths = [
-          ...new Set(
-            // > This means that most OLED screens that say they are 3x resolution,
-            // > are actually 3x in the green color, but only 1.5x in the red and
-            // > blue colors. Showing a 3x resolution image in the app vs a 2x
-            // > resolution image will be visually the same, though the 3x image
-            // > takes significantly more data. Even true 3x resolution screens are
-            // > wasteful as the human eye cannot see that level of detail without
-            // > something like a magnifying glass.
-            // https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/capping-image-fidelity-on-ultra-high-resolution-devices.html
-            [
-              width,
-              width * 2
-              /*, width * 3*/
-            ].map((w) => allSizes.find((p) => p >= w) || allSizes[allSizes.length - 1])
-          )
-        ];
-        return {
-          widths,
-          kind: "x"
-        };
-      }
-      function generateImgAttrs(param) {
-        let { config, src, unoptimized, width, quality, sizes, loader } = param;
-        if (unoptimized) {
-          return {
-            src,
-            srcSet: void 0,
-            sizes: void 0
-          };
-        }
-        const { widths, kind } = getWidths(config, width, sizes);
-        const last = widths.length - 1;
-        return {
-          sizes: !sizes && kind === "w" ? "100vw" : sizes,
-          srcSet: widths.map((w, i) => loader({
-            config,
-            src,
-            quality,
-            width: w
-          }) + " " + (kind === "w" ? w : i + 1) + kind).join(", "),
-          // It's intended to keep `src` the last attribute because React updates
-          // attributes in order. If we keep `src` the first one, Safari will
-          // immediately start to fetch `src`, before `sizes` and `srcSet` are even
-          // updated by React. That causes multiple unnecessary requests if `srcSet`
-          // and `sizes` are defined.
-          // This bug cannot be reproduced in Chrome or Firefox.
-          src: loader({
-            config,
-            src,
-            quality,
-            width: widths[last]
-          })
-        };
-      }
-      function getImgProps(param, _state) {
-        let { src, sizes, unoptimized = false, priority = false, loading, className, quality, width, height, fill = false, style, overrideSrc, onLoad, onLoadingComplete, placeholder = "empty", blurDataURL, fetchPriority, decoding = "async", layout, objectFit, objectPosition, lazyBoundary, lazyRoot, ...rest } = param;
-        const { imgConf, showAltText, blurComplete, defaultLoader } = _state;
-        let config;
-        let c = imgConf || _imageconfig.imageConfigDefault;
-        if ("allSizes" in c) {
-          config = c;
-        } else {
-          var _c_qualities;
-          const allSizes = [
-            ...c.deviceSizes,
-            ...c.imageSizes
-          ].sort((a, b) => a - b);
-          const deviceSizes = c.deviceSizes.sort((a, b) => a - b);
-          const qualities = (_c_qualities = c.qualities) == null ? void 0 : _c_qualities.sort((a, b) => a - b);
-          config = {
-            ...c,
-            allSizes,
-            deviceSizes,
-            qualities
-          };
-        }
-        if (typeof defaultLoader === "undefined") {
-          throw Object.defineProperty(new Error("images.loaderFile detected but the file is missing default export.\nRead more: https://nextjs.org/docs/messages/invalid-images-config"), "__NEXT_ERROR_CODE", {
-            value: "E163",
-            enumerable: false,
-            configurable: true
-          });
-        }
-        let loader = rest.loader || defaultLoader;
-        delete rest.loader;
-        delete rest.srcSet;
-        const isDefaultLoader = "__next_img_default" in loader;
-        if (isDefaultLoader) {
-          if (config.loader === "custom") {
-            throw Object.defineProperty(new Error('Image with src "' + src + '" is missing "loader" prop.\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader'), "__NEXT_ERROR_CODE", {
-              value: "E252",
-              enumerable: false,
-              configurable: true
-            });
-          }
-        } else {
-          const customImageLoader = loader;
-          loader = (obj) => {
-            const { config: _, ...opts } = obj;
-            return customImageLoader(opts);
-          };
-        }
-        if (layout) {
-          if (layout === "fill") {
-            fill = true;
-          }
-          const layoutToStyle = {
-            intrinsic: {
-              maxWidth: "100%",
-              height: "auto"
-            },
-            responsive: {
-              width: "100%",
-              height: "auto"
-            }
-          };
-          const layoutToSizes = {
-            responsive: "100vw",
-            fill: "100vw"
-          };
-          const layoutStyle = layoutToStyle[layout];
-          if (layoutStyle) {
-            style = {
-              ...style,
-              ...layoutStyle
-            };
-          }
-          const layoutSizes = layoutToSizes[layout];
-          if (layoutSizes && !sizes) {
-            sizes = layoutSizes;
-          }
-        }
-        let staticSrc = "";
-        let widthInt = getInt(width);
-        let heightInt = getInt(height);
-        let blurWidth;
-        let blurHeight;
-        if (isStaticImport(src)) {
-          const staticImageData = isStaticRequire(src) ? src.default : src;
-          if (!staticImageData.src) {
-            throw Object.defineProperty(new Error("An object should only be passed to the image component src parameter if it comes from a static image import. It must include src. Received " + JSON.stringify(staticImageData)), "__NEXT_ERROR_CODE", {
-              value: "E460",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (!staticImageData.height || !staticImageData.width) {
-            throw Object.defineProperty(new Error("An object should only be passed to the image component src parameter if it comes from a static image import. It must include height and width. Received " + JSON.stringify(staticImageData)), "__NEXT_ERROR_CODE", {
-              value: "E48",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          blurWidth = staticImageData.blurWidth;
-          blurHeight = staticImageData.blurHeight;
-          blurDataURL = blurDataURL || staticImageData.blurDataURL;
-          staticSrc = staticImageData.src;
-          if (!fill) {
-            if (!widthInt && !heightInt) {
-              widthInt = staticImageData.width;
-              heightInt = staticImageData.height;
-            } else if (widthInt && !heightInt) {
-              const ratio = widthInt / staticImageData.width;
-              heightInt = Math.round(staticImageData.height * ratio);
-            } else if (!widthInt && heightInt) {
-              const ratio = heightInt / staticImageData.height;
-              widthInt = Math.round(staticImageData.width * ratio);
-            }
-          }
-        }
-        src = typeof src === "string" ? src : staticSrc;
-        let isLazy = !priority && (loading === "lazy" || typeof loading === "undefined");
-        if (!src || src.startsWith("data:") || src.startsWith("blob:")) {
-          unoptimized = true;
-          isLazy = false;
-        }
-        if (config.unoptimized) {
-          unoptimized = true;
-        }
-        if (isDefaultLoader && !config.dangerouslyAllowSVG && src.split("?", 1)[0].endsWith(".svg")) {
-          unoptimized = true;
-        }
-        const qualityInt = getInt(quality);
-        if (false) {
-          if (config.output === "export" && isDefaultLoader && !unoptimized) {
-            throw Object.defineProperty(new Error("Image Optimization using the default loader is not compatible with `{ output: 'export' }`.\n  Possible solutions:\n    - Remove `{ output: 'export' }` and run \"next start\" to run server mode including the Image Optimization API.\n    - Configure `{ images: { unoptimized: true } }` in `next.config.js` to disable the Image Optimization API.\n  Read more: https://nextjs.org/docs/messages/export-image-api"), "__NEXT_ERROR_CODE", {
-              value: "E500",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (!src) {
-            unoptimized = true;
-          } else {
-            if (fill) {
-              if (width) {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has both "width" and "fill" properties. Only one should be used.'), "__NEXT_ERROR_CODE", {
-                  value: "E96",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if (height) {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has both "height" and "fill" properties. Only one should be used.'), "__NEXT_ERROR_CODE", {
-                  value: "E115",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if ((style == null ? void 0 : style.position) && style.position !== "absolute") {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has both "fill" and "style.position" properties. Images with "fill" always use position absolute - it cannot be modified.'), "__NEXT_ERROR_CODE", {
-                  value: "E216",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if ((style == null ? void 0 : style.width) && style.width !== "100%") {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has both "fill" and "style.width" properties. Images with "fill" always use width 100% - it cannot be modified.'), "__NEXT_ERROR_CODE", {
-                  value: "E73",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if ((style == null ? void 0 : style.height) && style.height !== "100%") {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has both "fill" and "style.height" properties. Images with "fill" always use height 100% - it cannot be modified.'), "__NEXT_ERROR_CODE", {
-                  value: "E404",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-            } else {
-              if (typeof widthInt === "undefined") {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" is missing required "width" property.'), "__NEXT_ERROR_CODE", {
-                  value: "E451",
-                  enumerable: false,
-                  configurable: true
-                });
-              } else if (isNaN(widthInt)) {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has invalid "width" property. Expected a numeric value in pixels but received "' + width + '".'), "__NEXT_ERROR_CODE", {
-                  value: "E66",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if (typeof heightInt === "undefined") {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" is missing required "height" property.'), "__NEXT_ERROR_CODE", {
-                  value: "E397",
-                  enumerable: false,
-                  configurable: true
-                });
-              } else if (isNaN(heightInt)) {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" has invalid "height" property. Expected a numeric value in pixels but received "' + height + '".'), "__NEXT_ERROR_CODE", {
-                  value: "E444",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if (/^[\x00-\x20]/.test(src)) {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" cannot start with a space or control character. Use src.trimStart() to remove it or encodeURIComponent(src) to keep it.'), "__NEXT_ERROR_CODE", {
-                  value: "E176",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-              if (/[\x00-\x20]$/.test(src)) {
-                throw Object.defineProperty(new Error('Image with src "' + src + '" cannot end with a space or control character. Use src.trimEnd() to remove it or encodeURIComponent(src) to keep it.'), "__NEXT_ERROR_CODE", {
-                  value: "E21",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-            }
-          }
-          if (!VALID_LOADING_VALUES.includes(loading)) {
-            throw Object.defineProperty(new Error('Image with src "' + src + '" has invalid "loading" property. Provided "' + loading + '" should be one of ' + VALID_LOADING_VALUES.map(String).join(",") + "."), "__NEXT_ERROR_CODE", {
-              value: "E357",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (priority && loading === "lazy") {
-            throw Object.defineProperty(new Error('Image with src "' + src + `" has both "priority" and "loading='lazy'" properties. Only one should be used.`), "__NEXT_ERROR_CODE", {
-              value: "E218",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (placeholder !== "empty" && placeholder !== "blur" && !placeholder.startsWith("data:image/")) {
-            throw Object.defineProperty(new Error('Image with src "' + src + '" has invalid "placeholder" property "' + placeholder + '".'), "__NEXT_ERROR_CODE", {
-              value: "E431",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (placeholder !== "empty") {
-            if (widthInt && heightInt && widthInt * heightInt < 1600) {
-              (0, _warnonce.warnOnce)('Image with src "' + src + '" is smaller than 40x40. Consider removing the "placeholder" property to improve performance.');
-            }
-          }
-          if (placeholder === "blur" && !blurDataURL) {
-            const VALID_BLUR_EXT = [
-              "jpeg",
-              "png",
-              "webp",
-              "avif"
-            ];
-            throw Object.defineProperty(new Error('Image with src "' + src + `" has "placeholder='blur'" property but is missing the "blurDataURL" property.
-        Possible solutions:
-          - Add a "blurDataURL" property, the contents should be a small Data URL to represent the image
-          - Change the "src" property to a static import with one of the supported file types: ` + VALID_BLUR_EXT.join(",") + ' (animated images not supported)\n          - Remove the "placeholder" property, effectively no blur effect\n        Read more: https://nextjs.org/docs/messages/placeholder-blur-data-url'), "__NEXT_ERROR_CODE", {
-              value: "E371",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if ("ref" in rest) {
-            (0, _warnonce.warnOnce)('Image with src "' + src + '" is using unsupported "ref" property. Consider using the "onLoad" property instead.');
-          }
-          if (!unoptimized && !isDefaultLoader) {
-            const urlStr = loader({
-              config,
-              src,
-              width: widthInt || 400,
-              quality: qualityInt || 75
-            });
-            let url;
-            try {
-              url = new URL(urlStr);
-            } catch (err) {
-            }
-            if (urlStr === src || url && url.pathname === src && !url.search) {
-              (0, _warnonce.warnOnce)('Image with src "' + src + '" has a "loader" property that does not implement width. Please implement it or use the "unoptimized" property instead.\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader-width');
-            }
-          }
-          if (onLoadingComplete) {
-            (0, _warnonce.warnOnce)('Image with src "' + src + '" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.');
-          }
-          for (const [legacyKey, legacyValue] of Object.entries({
-            layout,
-            objectFit,
-            objectPosition,
-            lazyBoundary,
-            lazyRoot
-          })) {
-            if (legacyValue) {
-              (0, _warnonce.warnOnce)('Image with src "' + src + '" has legacy prop "' + legacyKey + '". Did you forget to run the codemod?\nRead more: https://nextjs.org/docs/messages/next-image-upgrade-to-13');
-            }
-          }
-          if (typeof window !== "undefined" && !perfObserver && window.PerformanceObserver) {
-            perfObserver = new PerformanceObserver((entryList) => {
-              for (const entry of entryList.getEntries()) {
-                var _entry_element;
-                const imgSrc = (entry == null ? void 0 : (_entry_element = entry.element) == null ? void 0 : _entry_element.src) || "";
-                const lcpImage = allImgs.get(imgSrc);
-                if (lcpImage && !lcpImage.priority && lcpImage.placeholder === "empty" && !lcpImage.src.startsWith("data:") && !lcpImage.src.startsWith("blob:")) {
-                  (0, _warnonce.warnOnce)('Image with src "' + lcpImage.src + '" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.\nRead more: https://nextjs.org/docs/api-reference/next/image#priority');
-                }
-              }
-            });
-            try {
-              perfObserver.observe({
-                type: "largest-contentful-paint",
-                buffered: true
-              });
-            } catch (err) {
-              console.error(err);
-            }
-          }
-        }
-        const imgStyle = Object.assign(fill ? {
-          position: "absolute",
-          height: "100%",
-          width: "100%",
-          left: 0,
-          top: 0,
-          right: 0,
-          bottom: 0,
-          objectFit,
-          objectPosition
-        } : {}, showAltText ? {} : {
-          color: "transparent"
-        }, style);
-        const backgroundImage = !blurComplete && placeholder !== "empty" ? placeholder === "blur" ? 'url("data:image/svg+xml;charset=utf-8,' + (0, _imageblursvg.getImageBlurSvg)({
-          widthInt,
-          heightInt,
-          blurWidth,
-          blurHeight,
-          blurDataURL: blurDataURL || "",
-          objectFit: imgStyle.objectFit
-        }) + '")' : 'url("' + placeholder + '")' : null;
-        const backgroundSize = !INVALID_BACKGROUND_SIZE_VALUES.includes(imgStyle.objectFit) ? imgStyle.objectFit : imgStyle.objectFit === "fill" ? "100% 100%" : "cover";
-        let placeholderStyle = backgroundImage ? {
-          backgroundSize,
-          backgroundPosition: imgStyle.objectPosition || "50% 50%",
-          backgroundRepeat: "no-repeat",
-          backgroundImage
-        } : {};
-        if (false) {
-          if (placeholderStyle.backgroundImage && placeholder === "blur" && (blurDataURL == null ? void 0 : blurDataURL.startsWith("/"))) {
-            placeholderStyle.backgroundImage = 'url("' + blurDataURL + '")';
-          }
-        }
-        const imgAttributes = generateImgAttrs({
-          config,
-          src,
-          unoptimized,
-          width: widthInt,
-          quality: qualityInt,
-          sizes,
-          loader
-        });
-        if (false) {
-          if (typeof window !== "undefined") {
-            let fullUrl;
-            try {
-              fullUrl = new URL(imgAttributes.src);
-            } catch (e) {
-              fullUrl = new URL(imgAttributes.src, window.location.href);
-            }
-            allImgs.set(fullUrl.href, {
-              src,
-              priority,
-              placeholder
-            });
-          }
-        }
-        const props = {
-          ...rest,
-          loading: isLazy ? "lazy" : loading,
-          fetchPriority,
-          width: widthInt,
-          height: heightInt,
-          decoding,
-          className,
-          style: {
-            ...imgStyle,
-            ...placeholderStyle
-          },
-          sizes: imgAttributes.sizes,
-          srcSet: imgAttributes.srcSet,
-          src: overrideSrc || imgAttributes.src
-        };
-        const meta = {
-          unoptimized,
-          priority,
-          placeholder,
-          fill
-        };
-        return {
-          props,
-          meta
-        };
-      }
-    }
-  });
-
-  // node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs
-  var require_interop_require_wildcard = __commonJS({
-    "node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      function _getRequireWildcardCache(nodeInterop) {
-        if (typeof WeakMap !== "function") return null;
-        var cacheBabelInterop = /* @__PURE__ */ new WeakMap();
-        var cacheNodeInterop = /* @__PURE__ */ new WeakMap();
-        return (_getRequireWildcardCache = function(nodeInterop2) {
-          return nodeInterop2 ? cacheNodeInterop : cacheBabelInterop;
-        })(nodeInterop);
-      }
-      function _interop_require_wildcard(obj, nodeInterop) {
-        if (!nodeInterop && obj && obj.__esModule) return obj;
-        if (obj === null || typeof obj !== "object" && typeof obj !== "function") return { default: obj };
-        var cache = _getRequireWildcardCache(nodeInterop);
-        if (cache && cache.has(obj)) return cache.get(obj);
-        var newObj = { __proto__: null };
-        var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var key in obj) {
-          if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-            var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-            if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-            else newObj[key] = obj[key];
-          }
-        }
-        newObj.default = obj;
-        if (cache) cache.set(obj, newObj);
-        return newObj;
-      }
-      exports._ = _interop_require_wildcard;
-    }
-  });
-
-  // node_modules/react/cjs/react-jsx-runtime.production.js
-  var require_react_jsx_runtime_production = __commonJS({
-    "node_modules/react/cjs/react-jsx-runtime.production.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      var REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element");
-      var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-      function jsxProd(type, config, maybeKey) {
-        var key = null;
-        void 0 !== maybeKey && (key = "" + maybeKey);
-        void 0 !== config.key && (key = "" + config.key);
-        if ("key" in config) {
-          maybeKey = {};
-          for (var propName in config)
-            "key" !== propName && (maybeKey[propName] = config[propName]);
-        } else maybeKey = config;
-        config = maybeKey.ref;
-        return {
-          $$typeof: REACT_ELEMENT_TYPE,
-          type,
-          key,
-          ref: void 0 !== config ? config : null,
-          props: maybeKey
-        };
-      }
-      exports.Fragment = REACT_FRAGMENT_TYPE;
-      exports.jsx = jsxProd;
-      exports.jsxs = jsxProd;
-    }
-  });
-
-  // node_modules/react/jsx-runtime.js
-  var require_jsx_runtime = __commonJS({
-    "node_modules/react/jsx-runtime.js"(exports, module) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      if (true) {
-        module.exports = require_react_jsx_runtime_production();
-      } else {
-        module.exports = null;
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/side-effect.js
-  var require_side_effect = __commonJS({
-    "node_modules/next/dist/shared/lib/side-effect.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-          return SideEffect;
-        }
-      });
-      var _react = require_react();
-      var isServer = typeof window === "undefined";
-      var useClientOnlyLayoutEffect = isServer ? () => {
-      } : _react.useLayoutEffect;
-      var useClientOnlyEffect = isServer ? () => {
-      } : _react.useEffect;
-      function SideEffect(props) {
-        const { headManager, reduceComponentsToState } = props;
-        function emitChange() {
-          if (headManager && headManager.mountedInstances) {
-            const headElements = _react.Children.toArray(Array.from(headManager.mountedInstances).filter(Boolean));
-            headManager.updateHead(reduceComponentsToState(headElements, props));
-          }
-        }
-        if (isServer) {
-          var _headManager_mountedInstances;
-          headManager == null ? void 0 : (_headManager_mountedInstances = headManager.mountedInstances) == null ? void 0 : _headManager_mountedInstances.add(props.children);
-          emitChange();
-        }
-        useClientOnlyLayoutEffect(() => {
-          var _headManager_mountedInstances2;
-          headManager == null ? void 0 : (_headManager_mountedInstances2 = headManager.mountedInstances) == null ? void 0 : _headManager_mountedInstances2.add(props.children);
-          return () => {
-            var _headManager_mountedInstances3;
-            headManager == null ? void 0 : (_headManager_mountedInstances3 = headManager.mountedInstances) == null ? void 0 : _headManager_mountedInstances3.delete(props.children);
-          };
-        });
-        useClientOnlyLayoutEffect(() => {
-          if (headManager) {
-            headManager._pendingUpdate = emitChange;
-          }
-          return () => {
-            if (headManager) {
-              headManager._pendingUpdate = emitChange;
-            }
-          };
-        });
-        useClientOnlyEffect(() => {
-          if (headManager && headManager._pendingUpdate) {
-            headManager._pendingUpdate();
-            headManager._pendingUpdate = null;
-          }
-          return () => {
-            if (headManager && headManager._pendingUpdate) {
-              headManager._pendingUpdate();
-              headManager._pendingUpdate = null;
-            }
-          };
-        });
-        return null;
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/amp-context.shared-runtime.js
-  var require_amp_context_shared_runtime = __commonJS({
-    "node_modules/next/dist/shared/lib/amp-context.shared-runtime.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "AmpStateContext", {
-        enumerable: true,
-        get: function() {
-          return AmpStateContext;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _react = /* @__PURE__ */ _interop_require_default._(require_react());
-      var AmpStateContext = _react.default.createContext({});
-      if (false) {
-        AmpStateContext.displayName = "AmpStateContext";
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/head-manager-context.shared-runtime.js
-  var require_head_manager_context_shared_runtime = __commonJS({
-    "node_modules/next/dist/shared/lib/head-manager-context.shared-runtime.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "HeadManagerContext", {
-        enumerable: true,
-        get: function() {
-          return HeadManagerContext;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _react = /* @__PURE__ */ _interop_require_default._(require_react());
-      var HeadManagerContext = _react.default.createContext({});
-      if (false) {
-        HeadManagerContext.displayName = "HeadManagerContext";
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/amp-mode.js
-  var require_amp_mode = __commonJS({
-    "node_modules/next/dist/shared/lib/amp-mode.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "isInAmpMode", {
-        enumerable: true,
-        get: function() {
-          return isInAmpMode;
-        }
-      });
-      function isInAmpMode(param) {
-        let { ampFirst = false, hybrid = false, hasQuery = false } = param === void 0 ? {} : param;
-        return ampFirst || hybrid && hasQuery;
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/head.js
-  var require_head = __commonJS({
-    "node_modules/next/dist/shared/lib/head.js"(exports, module) {
-      "use client";
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      function _export(target, all) {
-        for (var name in all) Object.defineProperty(target, name, {
-          enumerable: true,
-          get: all[name]
-        });
-      }
-      _export(exports, {
-        default: function() {
-          return _default;
-        },
-        defaultHead: function() {
-          return defaultHead;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _interop_require_wildcard = require_interop_require_wildcard();
-      var _jsxruntime = require_jsx_runtime();
-      var _react = /* @__PURE__ */ _interop_require_wildcard._(require_react());
-      var _sideeffect = /* @__PURE__ */ _interop_require_default._(require_side_effect());
-      var _ampcontextsharedruntime = require_amp_context_shared_runtime();
-      var _headmanagercontextsharedruntime = require_head_manager_context_shared_runtime();
-      var _ampmode = require_amp_mode();
-      var _warnonce = require_warn_once();
-      function defaultHead(inAmpMode) {
-        if (inAmpMode === void 0) inAmpMode = false;
-        const head = [
-          /* @__PURE__ */ (0, _jsxruntime.jsx)("meta", {
-            charSet: "utf-8"
-          }, "charset")
-        ];
-        if (!inAmpMode) {
-          head.push(/* @__PURE__ */ (0, _jsxruntime.jsx)("meta", {
-            name: "viewport",
-            content: "width=device-width"
-          }, "viewport"));
-        }
-        return head;
-      }
-      function onlyReactElement(list, child) {
-        if (typeof child === "string" || typeof child === "number") {
-          return list;
-        }
-        if (child.type === _react.default.Fragment) {
-          return list.concat(
-            // @ts-expect-error @types/react does not remove fragments but this could also return ReactPortal[]
-            _react.default.Children.toArray(child.props.children).reduce(
-              // @ts-expect-error @types/react does not remove fragments but this could also return ReactPortal[]
-              (fragmentList, fragmentChild) => {
-                if (typeof fragmentChild === "string" || typeof fragmentChild === "number") {
-                  return fragmentList;
-                }
-                return fragmentList.concat(fragmentChild);
-              },
-              []
-            )
-          );
-        }
-        return list.concat(child);
-      }
-      var METATYPES = [
-        "name",
-        "httpEquiv",
-        "charSet",
-        "itemProp"
-      ];
-      function unique() {
-        const keys = /* @__PURE__ */ new Set();
-        const tags = /* @__PURE__ */ new Set();
-        const metaTypes = /* @__PURE__ */ new Set();
-        const metaCategories = {};
-        return (h) => {
-          let isUnique = true;
-          let hasKey = false;
-          if (h.key && typeof h.key !== "number" && h.key.indexOf("$") > 0) {
-            hasKey = true;
-            const key = h.key.slice(h.key.indexOf("$") + 1);
-            if (keys.has(key)) {
-              isUnique = false;
-            } else {
-              keys.add(key);
-            }
-          }
-          switch (h.type) {
-            case "title":
-            case "base":
-              if (tags.has(h.type)) {
-                isUnique = false;
-              } else {
-                tags.add(h.type);
-              }
-              break;
-            case "meta":
-              for (let i = 0, len = METATYPES.length; i < len; i++) {
-                const metatype = METATYPES[i];
-                if (!h.props.hasOwnProperty(metatype)) continue;
-                if (metatype === "charSet") {
-                  if (metaTypes.has(metatype)) {
-                    isUnique = false;
-                  } else {
-                    metaTypes.add(metatype);
-                  }
-                } else {
-                  const category = h.props[metatype];
-                  const categories = metaCategories[metatype] || /* @__PURE__ */ new Set();
-                  if ((metatype !== "name" || !hasKey) && categories.has(category)) {
-                    isUnique = false;
-                  } else {
-                    categories.add(category);
-                    metaCategories[metatype] = categories;
-                  }
-                }
-              }
-              break;
-          }
-          return isUnique;
-        };
-      }
-      function reduceComponents(headChildrenElements, props) {
-        const { inAmpMode } = props;
-        return headChildrenElements.reduce(onlyReactElement, []).reverse().concat(defaultHead(inAmpMode).reverse()).filter(unique()).reverse().map((c, i) => {
-          const key = c.key || i;
-          if (define_process_env_default.__NEXT_OPTIMIZE_FONTS && !inAmpMode) {
-            if (c.type === "link" && c.props["href"] && // TODO(prateekbh@): Replace this with const from `constants` when the tree shaking works.
-            [
-              "https://fonts.googleapis.com/css",
-              "https://use.typekit.net/"
-            ].some((url) => c.props["href"].startsWith(url))) {
-              const newProps = {
-                ...c.props || {}
-              };
-              newProps["data-href"] = newProps["href"];
-              newProps["href"] = void 0;
-              newProps["data-optimized-fonts"] = true;
-              return /* @__PURE__ */ _react.default.cloneElement(c, newProps);
-            }
-          }
-          if (false) {
-            if (c.type === "script" && c.props["type"] !== "application/ld+json") {
-              const srcMessage = c.props["src"] ? '<script> tag with src="' + c.props["src"] + '"' : "inline <script>";
-              (0, _warnonce.warnOnce)("Do not add <script> tags using next/head (see " + srcMessage + "). Use next/script instead. \nSee more info here: https://nextjs.org/docs/messages/no-script-tags-in-head-component");
-            } else if (c.type === "link" && c.props["rel"] === "stylesheet") {
-              (0, _warnonce.warnOnce)('Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="' + c.props["href"] + '"). Use Document instead. \nSee more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component');
-            }
-          }
-          return /* @__PURE__ */ _react.default.cloneElement(c, {
-            key
-          });
-        });
-      }
-      function Head(param) {
-        let { children } = param;
-        const ampState = (0, _react.useContext)(_ampcontextsharedruntime.AmpStateContext);
-        const headManager = (0, _react.useContext)(_headmanagercontextsharedruntime.HeadManagerContext);
-        return /* @__PURE__ */ (0, _jsxruntime.jsx)(_sideeffect.default, {
-          reduceComponentsToState: reduceComponents,
-          headManager,
-          inAmpMode: (0, _ampmode.isInAmpMode)(ampState),
-          children
-        });
-      }
-      var _default = Head;
-      if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-        Object.defineProperty(exports.default, "__esModule", { value: true });
-        Object.assign(exports.default, exports);
-        module.exports = exports.default;
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/image-config-context.shared-runtime.js
-  var require_image_config_context_shared_runtime = __commonJS({
-    "node_modules/next/dist/shared/lib/image-config-context.shared-runtime.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "ImageConfigContext", {
-        enumerable: true,
-        get: function() {
-          return ImageConfigContext;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _react = /* @__PURE__ */ _interop_require_default._(require_react());
-      var _imageconfig = require_image_config();
-      var ImageConfigContext = _react.default.createContext(_imageconfig.imageConfigDefault);
-      if (false) {
-        ImageConfigContext.displayName = "ImageConfigContext";
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/router-context.shared-runtime.js
-  var require_router_context_shared_runtime = __commonJS({
-    "node_modules/next/dist/shared/lib/router-context.shared-runtime.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "RouterContext", {
-        enumerable: true,
-        get: function() {
-          return RouterContext;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _react = /* @__PURE__ */ _interop_require_default._(require_react());
-      var RouterContext = _react.default.createContext(null);
-      if (false) {
-        RouterContext.displayName = "RouterContext";
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/image-loader.js
-  var require_image_loader = __commonJS({
-    "node_modules/next/dist/shared/lib/image-loader.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-          return _default;
-        }
-      });
-      var DEFAULT_Q = 75;
-      function defaultLoader(param) {
-        let { config, src, width, quality } = param;
-        var _config_qualities;
-        if (false) {
-          const missingValues = [];
-          if (!src) missingValues.push("src");
-          if (!width) missingValues.push("width");
-          if (missingValues.length > 0) {
-            throw Object.defineProperty(new Error("Next Image Optimization requires " + missingValues.join(", ") + " to be provided. Make sure you pass them as props to the `next/image` component. Received: " + JSON.stringify({
-              src,
-              width,
-              quality
-            })), "__NEXT_ERROR_CODE", {
-              value: "E188",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (src.startsWith("//")) {
-            throw Object.defineProperty(new Error('Failed to parse src "' + src + '" on `next/image`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)'), "__NEXT_ERROR_CODE", {
-              value: "E360",
-              enumerable: false,
-              configurable: true
-            });
-          }
-          if (src.startsWith("/") && config.localPatterns) {
-            if (
-              // micromatch isn't compatible with edge runtime
-              define_process_env_default.NEXT_RUNTIME !== "edge"
-            ) {
-              const { hasLocalMatch } = null;
-              if (!hasLocalMatch(config.localPatterns, src)) {
-                throw Object.defineProperty(new Error("Invalid src prop (" + src + ") on `next/image` does not match `images.localPatterns` configured in your `next.config.js`\nSee more info: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns"), "__NEXT_ERROR_CODE", {
-                  value: "E426",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-            }
-          }
-          if (!src.startsWith("/") && (config.domains || config.remotePatterns)) {
-            let parsedSrc;
-            try {
-              parsedSrc = new URL(src);
-            } catch (err) {
-              console.error(err);
-              throw Object.defineProperty(new Error('Failed to parse src "' + src + '" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)'), "__NEXT_ERROR_CODE", {
-                value: "E63",
-                enumerable: false,
-                configurable: true
-              });
-            }
-            if (
-              // micromatch isn't compatible with edge runtime
-              define_process_env_default.NEXT_RUNTIME !== "edge"
-            ) {
-              const { hasRemoteMatch } = null;
-              if (!hasRemoteMatch(config.domains, config.remotePatterns, parsedSrc)) {
-                throw Object.defineProperty(new Error("Invalid src prop (" + src + ') on `next/image`, hostname "' + parsedSrc.hostname + '" is not configured under images in your `next.config.js`\nSee more info: https://nextjs.org/docs/messages/next-image-unconfigured-host'), "__NEXT_ERROR_CODE", {
-                  value: "E231",
-                  enumerable: false,
-                  configurable: true
-                });
-              }
-            }
-          }
-          if (quality && config.qualities && !config.qualities.includes(quality)) {
-            throw Object.defineProperty(new Error("Invalid quality prop (" + quality + ") on `next/image` does not match `images.qualities` configured in your `next.config.js`\nSee more info: https://nextjs.org/docs/messages/next-image-unconfigured-qualities"), "__NEXT_ERROR_CODE", {
-              value: "E623",
-              enumerable: false,
-              configurable: true
-            });
-          }
-        }
-        const q = quality || ((_config_qualities = config.qualities) == null ? void 0 : _config_qualities.reduce((prev, cur) => Math.abs(cur - DEFAULT_Q) < Math.abs(prev - DEFAULT_Q) ? cur : prev)) || DEFAULT_Q;
-        return config.path + "?url=" + encodeURIComponent(src) + "&w=" + width + "&q=" + q + (src.startsWith("/_next/static/media/") && define_process_env_default.NEXT_DEPLOYMENT_ID ? "&dpl=" + define_process_env_default.NEXT_DEPLOYMENT_ID : "");
-      }
-      defaultLoader.__next_img_default = true;
-      var _default = defaultLoader;
-    }
-  });
-
-  // node_modules/next/dist/client/use-merged-ref.js
-  var require_use_merged_ref = __commonJS({
-    "node_modules/next/dist/client/use-merged-ref.js"(exports, module) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "useMergedRef", {
-        enumerable: true,
-        get: function() {
-          return useMergedRef;
-        }
-      });
-      var _react = require_react();
-      function useMergedRef(refA, refB) {
-        const cleanupA = (0, _react.useRef)(null);
-        const cleanupB = (0, _react.useRef)(null);
-        return (0, _react.useCallback)((current) => {
-          if (current === null) {
-            const cleanupFnA = cleanupA.current;
-            if (cleanupFnA) {
-              cleanupA.current = null;
-              cleanupFnA();
-            }
-            const cleanupFnB = cleanupB.current;
-            if (cleanupFnB) {
-              cleanupB.current = null;
-              cleanupFnB();
-            }
-          } else {
-            if (refA) {
-              cleanupA.current = applyRef(refA, current);
-            }
-            if (refB) {
-              cleanupB.current = applyRef(refB, current);
-            }
-          }
-        }, [
-          refA,
-          refB
-        ]);
-      }
-      function applyRef(refA, current) {
-        if (typeof refA === "function") {
-          const cleanup = refA(current);
-          if (typeof cleanup === "function") {
-            return cleanup;
-          } else {
-            return () => refA(null);
-          }
-        } else {
-          refA.current = current;
-          return () => {
-            refA.current = null;
-          };
-        }
-      }
-      if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-        Object.defineProperty(exports.default, "__esModule", { value: true });
-        Object.assign(exports.default, exports);
-        module.exports = exports.default;
-      }
-    }
-  });
-
-  // node_modules/next/dist/client/image-component.js
-  var require_image_component = __commonJS({
-    "node_modules/next/dist/client/image-component.js"(exports, module) {
-      "use client";
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      Object.defineProperty(exports, "Image", {
-        enumerable: true,
-        get: function() {
-          return Image2;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _interop_require_wildcard = require_interop_require_wildcard();
-      var _jsxruntime = require_jsx_runtime();
-      var _react = /* @__PURE__ */ _interop_require_wildcard._(require_react());
-      var _reactdom = /* @__PURE__ */ _interop_require_default._(require_react_dom());
-      var _head = /* @__PURE__ */ _interop_require_default._(require_head());
-      var _getimgprops = require_get_img_props();
-      var _imageconfig = require_image_config();
-      var _imageconfigcontextsharedruntime = require_image_config_context_shared_runtime();
-      var _warnonce = require_warn_once();
-      var _routercontextsharedruntime = require_router_context_shared_runtime();
-      var _imageloader = /* @__PURE__ */ _interop_require_default._(require_image_loader());
-      var _usemergedref = require_use_merged_ref();
-      var configEnv = define_process_env_default.__NEXT_IMAGE_OPTS;
-      if (typeof window === "undefined") {
-        ;
-        globalThis.__NEXT_IMAGE_IMPORTED = true;
-      }
-      function handleLoading(img, placeholder, onLoadRef, onLoadingCompleteRef, setBlurComplete, unoptimized, sizesInput) {
-        const src = img == null ? void 0 : img.src;
-        if (!img || img["data-loaded-src"] === src) {
-          return;
-        }
-        img["data-loaded-src"] = src;
-        const p = "decode" in img ? img.decode() : Promise.resolve();
-        p.catch(() => {
-        }).then(() => {
-          if (!img.parentElement || !img.isConnected) {
-            return;
-          }
-          if (placeholder !== "empty") {
-            setBlurComplete(true);
-          }
-          if (onLoadRef == null ? void 0 : onLoadRef.current) {
-            const event = new Event("load");
-            Object.defineProperty(event, "target", {
-              writable: false,
-              value: img
-            });
-            let prevented = false;
-            let stopped = false;
-            onLoadRef.current({
-              ...event,
-              nativeEvent: event,
-              currentTarget: img,
-              target: img,
-              isDefaultPrevented: () => prevented,
-              isPropagationStopped: () => stopped,
-              persist: () => {
-              },
-              preventDefault: () => {
-                prevented = true;
-                event.preventDefault();
-              },
-              stopPropagation: () => {
-                stopped = true;
-                event.stopPropagation();
-              }
-            });
-          }
-          if (onLoadingCompleteRef == null ? void 0 : onLoadingCompleteRef.current) {
-            onLoadingCompleteRef.current(img);
-          }
-          if (false) {
-            const origSrc = new URL(src, "http://n").searchParams.get("url") || src;
-            if (img.getAttribute("data-nimg") === "fill") {
-              if (!unoptimized && (!sizesInput || sizesInput === "100vw")) {
-                let widthViewportRatio = img.getBoundingClientRect().width / window.innerWidth;
-                if (widthViewportRatio < 0.6) {
-                  if (sizesInput === "100vw") {
-                    (0, _warnonce.warnOnce)('Image with src "' + origSrc + '" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes');
-                  } else {
-                    (0, _warnonce.warnOnce)('Image with src "' + origSrc + '" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes');
-                  }
-                }
-              }
-              if (img.parentElement) {
-                const { position } = window.getComputedStyle(img.parentElement);
-                const valid = [
-                  "absolute",
-                  "fixed",
-                  "relative"
-                ];
-                if (!valid.includes(position)) {
-                  (0, _warnonce.warnOnce)('Image with src "' + origSrc + '" has "fill" and parent element with invalid "position". Provided "' + position + '" should be one of ' + valid.map(String).join(",") + ".");
-                }
-              }
-              if (img.height === 0) {
-                (0, _warnonce.warnOnce)('Image with src "' + origSrc + '" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.');
-              }
-            }
-            const heightModified = img.height.toString() !== img.getAttribute("height");
-            const widthModified = img.width.toString() !== img.getAttribute("width");
-            if (heightModified && !widthModified || !heightModified && widthModified) {
-              (0, _warnonce.warnOnce)('Image with src "' + origSrc + `" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.`);
-            }
-          }
-        });
-      }
-      function getDynamicProps(fetchPriority) {
-        if (Boolean(_react.use)) {
-          return {
-            fetchPriority
-          };
-        }
-        return {
-          fetchpriority: fetchPriority
-        };
-      }
-      var ImageElement = /* @__PURE__ */ (0, _react.forwardRef)((param, forwardedRef) => {
-        let { src, srcSet, sizes, height, width, decoding, className, style, fetchPriority, placeholder, loading, unoptimized, fill, onLoadRef, onLoadingCompleteRef, setBlurComplete, setShowAltText, sizesInput, onLoad, onError, ...rest } = param;
-        const ownRef = (0, _react.useCallback)((img) => {
-          if (!img) {
-            return;
-          }
-          if (onError) {
-            img.src = img.src;
-          }
-          if (false) {
-            if (!src) {
-              console.error('Image is missing required "src" property:', img);
-            }
-            if (img.getAttribute("alt") === null) {
-              console.error('Image is missing required "alt" property. Please add Alternative Text to describe the image for screen readers and search engines.');
-            }
-          }
-          if (img.complete) {
-            handleLoading(img, placeholder, onLoadRef, onLoadingCompleteRef, setBlurComplete, unoptimized, sizesInput);
-          }
-        }, [
-          src,
-          placeholder,
-          onLoadRef,
-          onLoadingCompleteRef,
-          setBlurComplete,
-          onError,
-          unoptimized,
-          sizesInput
-        ]);
-        const ref = (0, _usemergedref.useMergedRef)(forwardedRef, ownRef);
-        return /* @__PURE__ */ (0, _jsxruntime.jsx)("img", {
-          ...rest,
-          ...getDynamicProps(fetchPriority),
-          // It's intended to keep `loading` before `src` because React updates
-          // props in order which causes Safari/Firefox to not lazy load properly.
-          // See https://github.com/facebook/react/issues/25883
-          loading,
-          width,
-          height,
-          decoding,
-          "data-nimg": fill ? "fill" : "1",
-          className,
-          style,
-          // It's intended to keep `src` the last attribute because React updates
-          // attributes in order. If we keep `src` the first one, Safari will
-          // immediately start to fetch `src`, before `sizes` and `srcSet` are even
-          // updated by React. That causes multiple unnecessary requests if `srcSet`
-          // and `sizes` are defined.
-          // This bug cannot be reproduced in Chrome or Firefox.
-          sizes,
-          srcSet,
-          src,
-          ref,
-          onLoad: (event) => {
-            const img = event.currentTarget;
-            handleLoading(img, placeholder, onLoadRef, onLoadingCompleteRef, setBlurComplete, unoptimized, sizesInput);
-          },
-          onError: (event) => {
-            setShowAltText(true);
-            if (placeholder !== "empty") {
-              setBlurComplete(true);
-            }
-            if (onError) {
-              onError(event);
-            }
-          }
-        });
-      });
-      function ImagePreload(param) {
-        let { isAppRouter, imgAttributes } = param;
-        const opts = {
-          as: "image",
-          imageSrcSet: imgAttributes.srcSet,
-          imageSizes: imgAttributes.sizes,
-          crossOrigin: imgAttributes.crossOrigin,
-          referrerPolicy: imgAttributes.referrerPolicy,
-          ...getDynamicProps(imgAttributes.fetchPriority)
-        };
-        if (isAppRouter && _reactdom.default.preload) {
-          _reactdom.default.preload(
-            imgAttributes.src,
-            // @ts-expect-error TODO: upgrade to `@types/react-dom@18.3.x`
-            opts
-          );
-          return null;
-        }
-        return /* @__PURE__ */ (0, _jsxruntime.jsx)(_head.default, {
-          children: /* @__PURE__ */ (0, _jsxruntime.jsx)("link", {
-            rel: "preload",
-            // Note how we omit the `href` attribute, as it would only be relevant
-            // for browsers that do not support `imagesrcset`, and in those cases
-            // it would cause the incorrect image to be preloaded.
-            //
-            // https://html.spec.whatwg.org/multipage/semantics.html#attr-link-imagesrcset
-            href: imgAttributes.srcSet ? void 0 : imgAttributes.src,
-            ...opts
-          }, "__nimg-" + imgAttributes.src + imgAttributes.srcSet + imgAttributes.sizes)
-        });
-      }
-      var Image2 = /* @__PURE__ */ (0, _react.forwardRef)((props, forwardedRef) => {
-        const pagesRouter = (0, _react.useContext)(_routercontextsharedruntime.RouterContext);
-        const isAppRouter = !pagesRouter;
-        const configContext = (0, _react.useContext)(_imageconfigcontextsharedruntime.ImageConfigContext);
-        const config = (0, _react.useMemo)(() => {
-          var _c_qualities;
-          const c = configEnv || configContext || _imageconfig.imageConfigDefault;
-          const allSizes = [
-            ...c.deviceSizes,
-            ...c.imageSizes
-          ].sort((a, b) => a - b);
-          const deviceSizes = c.deviceSizes.sort((a, b) => a - b);
-          const qualities = (_c_qualities = c.qualities) == null ? void 0 : _c_qualities.sort((a, b) => a - b);
-          return {
-            ...c,
-            allSizes,
-            deviceSizes,
-            qualities
-          };
-        }, [
-          configContext
-        ]);
-        const { onLoad, onLoadingComplete } = props;
-        const onLoadRef = (0, _react.useRef)(onLoad);
-        (0, _react.useEffect)(() => {
-          onLoadRef.current = onLoad;
-        }, [
-          onLoad
-        ]);
-        const onLoadingCompleteRef = (0, _react.useRef)(onLoadingComplete);
-        (0, _react.useEffect)(() => {
-          onLoadingCompleteRef.current = onLoadingComplete;
-        }, [
-          onLoadingComplete
-        ]);
-        const [blurComplete, setBlurComplete] = (0, _react.useState)(false);
-        const [showAltText, setShowAltText] = (0, _react.useState)(false);
-        const { props: imgAttributes, meta: imgMeta } = (0, _getimgprops.getImgProps)(props, {
-          defaultLoader: _imageloader.default,
-          imgConf: config,
-          blurComplete,
-          showAltText
-        });
-        return /* @__PURE__ */ (0, _jsxruntime.jsxs)(_jsxruntime.Fragment, {
-          children: [
-            /* @__PURE__ */ (0, _jsxruntime.jsx)(ImageElement, {
-              ...imgAttributes,
-              unoptimized: imgMeta.unoptimized,
-              placeholder: imgMeta.placeholder,
-              fill: imgMeta.fill,
-              onLoadRef,
-              onLoadingCompleteRef,
-              setBlurComplete,
-              setShowAltText,
-              sizesInput: props.sizes,
-              ref: forwardedRef
-            }),
-            imgMeta.priority ? /* @__PURE__ */ (0, _jsxruntime.jsx)(ImagePreload, {
-              isAppRouter,
-              imgAttributes
-            }) : null
-          ]
-        });
-      });
-      if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-        Object.defineProperty(exports.default, "__esModule", { value: true });
-        Object.assign(exports.default, exports);
-        module.exports = exports.default;
-      }
-    }
-  });
-
-  // node_modules/next/dist/shared/lib/image-external.js
-  var require_image_external = __commonJS({
-    "node_modules/next/dist/shared/lib/image-external.js"(exports) {
-      "use strict";
-      init_define_process();
-      init_define_process_env();
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      function _export(target, all) {
-        for (var name in all) Object.defineProperty(target, name, {
-          enumerable: true,
-          get: all[name]
-        });
-      }
-      _export(exports, {
-        default: function() {
-          return _default;
-        },
-        getImageProps: function() {
-          return getImageProps;
-        }
-      });
-      var _interop_require_default = require_interop_require_default();
-      var _getimgprops = require_get_img_props();
-      var _imagecomponent = require_image_component();
-      var _imageloader = /* @__PURE__ */ _interop_require_default._(require_image_loader());
-      function getImageProps(imgProps) {
-        const { props } = (0, _getimgprops.getImgProps)(imgProps, {
-          defaultLoader: _imageloader.default,
-          // This is replaced by webpack define plugin
-          imgConf: define_process_env_default.__NEXT_IMAGE_OPTS
-        });
-        for (const [key, value] of Object.entries(props)) {
-          if (value === void 0) {
-            delete props[key];
-          }
-        }
-        return {
-          props
-        };
-      }
-      var _default = _imagecomponent.Image;
-    }
-  });
-
-  // node_modules/next/image.js
-  var require_image = __commonJS({
-    "node_modules/next/image.js"(exports, module) {
-      init_define_process();
-      init_define_process_env();
-      module.exports = require_image_external();
-    }
-  });
-
   // widget.js
   init_define_process();
   init_define_process_env();
-  var import_react3 = __toESM(require_react());
+  var import_react4 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
   // components/MyWidget.js
   init_define_process();
   init_define_process_env();
-  var import_react = __toESM(require_react());
-  var import_image = __toESM(require_image());
-  var import_react2 = __toESM(require_react());
+  var import_react3 = __toESM(require_react());
+
+  // node_modules/react-icons/ci/index.mjs
+  init_define_process();
+  init_define_process_env();
+
+  // node_modules/react-icons/lib/index.mjs
+  init_define_process();
+  init_define_process_env();
+
+  // node_modules/react-icons/lib/iconsManifest.mjs
+  init_define_process();
+  init_define_process_env();
+
+  // node_modules/react-icons/lib/iconBase.mjs
+  init_define_process();
+  init_define_process_env();
+  var import_react2 = __toESM(require_react(), 1);
+
+  // node_modules/react-icons/lib/iconContext.mjs
+  init_define_process();
+  init_define_process_env();
+  var import_react = __toESM(require_react(), 1);
+  var DefaultContext = {
+    color: void 0,
+    size: void 0,
+    className: void 0,
+    style: void 0,
+    attr: void 0
+  };
+  var IconContext = import_react.default.createContext && /* @__PURE__ */ import_react.default.createContext(DefaultContext);
+
+  // node_modules/react-icons/lib/iconBase.mjs
+  var _excluded = ["attr", "size", "title"];
+  function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+      var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+      for (i = 0; i < sourceSymbolKeys.length; i++) {
+        key = sourceSymbolKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+        target[key] = source[key];
+      }
+    }
+    return target;
+  }
+  function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+      }
+    }
+    return target;
+  }
+  function _extends() {
+    _extends = Object.assign ? Object.assign.bind() : function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    return _extends.apply(this, arguments);
+  }
+  function ownKeys(e, r) {
+    var t = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+      var o = Object.getOwnPropertySymbols(e);
+      r && (o = o.filter(function(r2) {
+        return Object.getOwnPropertyDescriptor(e, r2).enumerable;
+      })), t.push.apply(t, o);
+    }
+    return t;
+  }
+  function _objectSpread(e) {
+    for (var r = 1; r < arguments.length; r++) {
+      var t = null != arguments[r] ? arguments[r] : {};
+      r % 2 ? ownKeys(Object(t), true).forEach(function(r2) {
+        _defineProperty(e, r2, t[r2]);
+      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function(r2) {
+        Object.defineProperty(e, r2, Object.getOwnPropertyDescriptor(t, r2));
+      });
+    }
+    return e;
+  }
+  function _defineProperty(obj, key, value) {
+    key = _toPropertyKey(key);
+    if (key in obj) {
+      Object.defineProperty(obj, key, { value, enumerable: true, configurable: true, writable: true });
+    } else {
+      obj[key] = value;
+    }
+    return obj;
+  }
+  function _toPropertyKey(t) {
+    var i = _toPrimitive(t, "string");
+    return "symbol" == typeof i ? i : i + "";
+  }
+  function _toPrimitive(t, r) {
+    if ("object" != typeof t || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+      var i = e.call(t, r || "default");
+      if ("object" != typeof i) return i;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+  }
+  function Tree2Element(tree) {
+    return tree && tree.map((node, i) => /* @__PURE__ */ import_react2.default.createElement(node.tag, _objectSpread({
+      key: i
+    }, node.attr), Tree2Element(node.child)));
+  }
+  function GenIcon(data) {
+    return (props) => /* @__PURE__ */ import_react2.default.createElement(IconBase, _extends({
+      attr: _objectSpread({}, data.attr)
+    }, props), Tree2Element(data.child));
+  }
+  function IconBase(props) {
+    var elem = (conf) => {
+      var {
+        attr,
+        size,
+        title
+      } = props, svgProps = _objectWithoutProperties(props, _excluded);
+      var computedSize = size || conf.size || "1em";
+      var className;
+      if (conf.className) className = conf.className;
+      if (props.className) className = (className ? className + " " : "") + props.className;
+      return /* @__PURE__ */ import_react2.default.createElement("svg", _extends({
+        stroke: "currentColor",
+        fill: "currentColor",
+        strokeWidth: "0"
+      }, conf.attr, attr, svgProps, {
+        className,
+        style: _objectSpread(_objectSpread({
+          color: props.color || conf.color
+        }, conf.style), props.style),
+        height: computedSize,
+        width: computedSize,
+        xmlns: "http://www.w3.org/2000/svg"
+      }), title && /* @__PURE__ */ import_react2.default.createElement("title", null, title), props.children);
+    };
+    return IconContext !== void 0 ? /* @__PURE__ */ import_react2.default.createElement(IconContext.Consumer, null, (conf) => elem(conf)) : elem(DefaultContext);
+  }
+
+  // node_modules/react-icons/ci/index.mjs
+  function CiChat2(props) {
+    return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24" }, "child": [{ "tag": "g", "attr": { "id": "Chat_2" }, "child": [{ "tag": "path", "attr": { "d": "M12,19.937a1.243,1.243,0,0,1-.833-.319L9.281,17.932a1.531,1.531,0,0,0-1.08-.458H4.561a2.5,2.5,0,0,1-2.5-2.5l.006-8.41a2.5,2.5,0,0,1,2.5-2.5H19.439a2.5,2.5,0,0,1,2.5,2.5v8.411a2.5,2.5,0,0,1-2.5,2.5H15.79a1.483,1.483,0,0,0-1.062.441l-1.895,1.7A1.243,1.243,0,0,1,12,19.937ZM4.567,5.063a1.5,1.5,0,0,0-1.5,1.5l-.006,8.411a1.5,1.5,0,0,0,1.5,1.5H8.2a2.483,2.483,0,0,1,1.767.732l1.864,1.667a.248.248,0,0,0,.333,0l1.874-1.682a2.5,2.5,0,0,1,1.751-.716h3.649a1.5,1.5,0,0,0,1.5-1.5V6.563a1.5,1.5,0,0,0-1.5-1.5Z" }, "child": [] }] }] })(props);
+  }
+
+  // node_modules/react-icons/io/index.mjs
+  init_define_process();
+  init_define_process_env();
+  function IoMdChatbubbles(props) {
+    return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M132.8 368c-20.2 0-44.8-24.6-44.8-44.8V160h-9.6C61.7 160 48 173.7 48 190.4V464l58.5-58h215.1c16.7 0 30.4-14.1 30.4-30.9V368H132.8z" }, "child": [] }, { "tag": "path", "attr": { "d": "M429.1 48H149.9C130.7 48 115 63.7 115 82.9V309c0 19.2 15.7 35 34.9 35h238.2l75.9 53V82.9c0-19.2-15.7-34.9-34.9-34.9z" }, "child": [] }] })(props);
+  }
+
+  // components/MyWidget.js
   function MyWidget() {
-    const [show, setShow] = (0, import_react2.useState)(false);
-    return /* @__PURE__ */ import_react.default.createElement(import_react2.Fragment, null, /* @__PURE__ */ import_react.default.createElement(import_react2.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "" }, show === true ? /* @__PURE__ */ import_react.default.createElement(import_react2.Fragment, null, /* @__PURE__ */ import_react.default.createElement(
+    const [show, setShow] = (0, import_react3.useState)(false);
+    return /* @__PURE__ */ import_react3.default.createElement(import_react3.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("div", null, show && /* @__PURE__ */ import_react3.default.createElement(
       "div",
       {
-        style: { boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)" },
-        className: "fixed bottom-[calc(6rem+1.5rem)] z-20 right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[634px] shadow-lg"
+        style: {
+          position: "fixed",
+          bottom: "calc(6rem + 1.5rem)",
+          zIndex: 20,
+          right: 0,
+          marginRight: "1rem",
+          backgroundColor: "#ffffff",
+          padding: "1.5rem",
+          borderRadius: "0.5rem",
+          border: "1px solid #e5e7eb",
+          width: "440px",
+          height: "634px",
+          boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05)"
+        }
       },
-      /* @__PURE__ */ import_react.default.createElement("div", { className: "flex flex-col space-y-1.5 pb-6" }, /* @__PURE__ */ import_react.default.createElement("h2", { className: "font-semibold text-lg tracking-tight" }, "Chatbot"), /* @__PURE__ */ import_react.default.createElement("p", { className: "text-sm text-[#6b7280] leading-3" }, "Powered by Mendable and Vercel")),
-      /* @__PURE__ */ import_react.default.createElement(
-        "div",
-        {
-          className: "pr-4 h-[474px]",
-          style: { minWidth: "100%", display: "table" }
-        },
-        /* @__PURE__ */ import_react.default.createElement("div", { className: "flex gap-3 my-4 text-gray-600 text-sm flex-1" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "relative flex shrink-0 overflow-hidden rounded-full w-8 h-8" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "rounded-full bg-gray-100 border p-1" }, /* @__PURE__ */ import_react.default.createElement(
-          "svg",
-          {
-            stroke: "none",
-            fill: "black",
-            strokeWidth: "1.5",
-            viewBox: "0 0 24 24",
-            "aria-hidden": "true",
-            height: 20,
-            width: 20,
-            xmlns: "http://www.w3.org/2000/svg"
-          },
-          /* @__PURE__ */ import_react.default.createElement(
-            "path",
-            {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              d: "M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
-            }
-          )
-        ))), /* @__PURE__ */ import_react.default.createElement("p", { className: "leading-relaxed" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "block font-bold text-gray-700" }, "AI "), "Hi, how can I help you today?")),
-        /* @__PURE__ */ import_react.default.createElement("div", { className: "flex gap-3 my-4 text-gray-600 text-sm flex-1" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "relative flex shrink-0 overflow-hidden rounded-full w-8 h-8" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "rounded-full bg-gray-100 border p-1" }, /* @__PURE__ */ import_react.default.createElement(
-          "svg",
-          {
-            stroke: "none",
-            fill: "black",
-            strokeWidth: 0,
-            viewBox: "0 0 16 16",
-            height: 20,
-            width: 20,
-            xmlns: "http://www.w3.org/2000/svg"
-          },
-          /* @__PURE__ */ import_react.default.createElement("path", { d: "M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" })
-        ))), /* @__PURE__ */ import_react.default.createElement("p", { className: "leading-relaxed" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "block font-bold text-gray-700" }, "You "), "fewafef")),
-        /* @__PURE__ */ import_react.default.createElement("div", { className: "flex gap-3 my-4 text-gray-600 text-sm flex-1" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "relative flex shrink-0 overflow-hidden rounded-full w-8 h-8" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "rounded-full bg-gray-100 border p-1" }, /* @__PURE__ */ import_react.default.createElement(
-          "svg",
-          {
-            stroke: "none",
-            fill: "black",
-            strokeWidth: "1.5",
-            viewBox: "0 0 24 24",
-            "aria-hidden": "true",
-            height: 20,
-            width: 20,
-            xmlns: "http://www.w3.org/2000/svg"
-          },
-          /* @__PURE__ */ import_react.default.createElement(
-            "path",
-            {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              d: "M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
-            }
-          )
-        ))), /* @__PURE__ */ import_react.default.createElement("p", { className: "leading-relaxed" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "block font-bold text-gray-700" }, "AI "), "Sorry, I couldn't find any information in the documentation about that. Expect answer to be less accurateI could not find the answer to this in the verified sources."))
-      ),
-      /* @__PURE__ */ import_react.default.createElement("div", { className: "flex items-center pt-0" }, /* @__PURE__ */ import_react.default.createElement("form", { className: "flex items-center justify-center w-full space-x-2" }, /* @__PURE__ */ import_react.default.createElement(
+      /* @__PURE__ */ import_react3.default.createElement("div", { style: { display: "flex", flexDirection: "column", rowGap: "0.375rem", paddingBottom: "1.5rem" } }, /* @__PURE__ */ import_react3.default.createElement("h2", { style: { fontWeight: "600", fontSize: "1.125rem", letterSpacing: "-0.015em" } }, "Chatbot"), /* @__PURE__ */ import_react3.default.createElement("p", { style: { fontSize: "0.875rem", color: "#6b7280", lineHeight: "0.75rem" } }, "Powered by Mendable and Vercel")),
+      /* @__PURE__ */ import_react3.default.createElement("div", { style: { paddingRight: "1rem", height: "474px", minWidth: "100%", display: "table" } }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { display: "flex", gap: "0.75rem", margin: "1rem 0", color: "#4b5563", fontSize: "0.875rem", flex: 1 } }, /* @__PURE__ */ import_react3.default.createElement("span", { style: { position: "relative", flexShrink: 0, overflow: "hidden", borderRadius: "9999px", width: "2rem", height: "2rem" } }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { borderRadius: "9999px", backgroundColor: "#f3f4f6", border: "1px solid #e5e7eb", padding: "0.25rem" } }, /* @__PURE__ */ import_react3.default.createElement("svg", { fill: "black", height: 20, width: 20, viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ import_react3.default.createElement("path", { d: "M9.813 15.904L9 18.75l-.813-2.846a4.5...z" })))), /* @__PURE__ */ import_react3.default.createElement("p", { style: { lineHeight: "1.5" } }, /* @__PURE__ */ import_react3.default.createElement("span", { style: { display: "block", fontWeight: "bold", color: "#374151" } }, "AI"), "Hi, how can I help you today?")), /* @__PURE__ */ import_react3.default.createElement("div", { style: { display: "flex", gap: "0.75rem", margin: "1rem 0", color: "#4b5563", fontSize: "0.875rem", flex: 1 } }, /* @__PURE__ */ import_react3.default.createElement("span", { style: { position: "relative", flexShrink: 0, overflow: "hidden", borderRadius: "9999px", width: "2rem", height: "2rem" } }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { borderRadius: "9999px", backgroundColor: "#f3f4f6", border: "1px solid #e5e7eb", padding: "0.25rem" } }, /* @__PURE__ */ import_react3.default.createElement("svg", { fill: "black", height: 20, width: 20, viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ import_react3.default.createElement("path", { d: "M8 8a3 3 0...Z" })))), /* @__PURE__ */ import_react3.default.createElement("p", { style: { lineHeight: "1.5" } }, /* @__PURE__ */ import_react3.default.createElement("span", { style: { display: "block", fontWeight: "bold", color: "#374151" } }, "You"), "fewafef")), /* @__PURE__ */ import_react3.default.createElement("div", { style: { display: "flex", gap: "0.75rem", margin: "1rem 0", color: "#4b5563", fontSize: "0.875rem", flex: 1 } }, /* @__PURE__ */ import_react3.default.createElement("span", { style: { position: "relative", flexShrink: 0, overflow: "hidden", borderRadius: "9999px", width: "2rem", height: "2rem" } }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { borderRadius: "9999px", backgroundColor: "#f3f4f6", border: "1px solid #e5e7eb", padding: "0.25rem" } }, /* @__PURE__ */ import_react3.default.createElement("svg", { fill: "black", height: 20, width: 20, viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ import_react3.default.createElement("path", { d: "M9.813 15.904L9 18.75...z" })))), /* @__PURE__ */ import_react3.default.createElement("p", { style: { lineHeight: "1.5" } }, /* @__PURE__ */ import_react3.default.createElement("span", { style: { display: "block", fontWeight: "bold", color: "#374151" } }, "AI"), "Sorry, I couldn't find any information in the documentation about that..."))),
+      /* @__PURE__ */ import_react3.default.createElement("div", { style: { display: "flex", alignItems: "center", paddingTop: 0 } }, /* @__PURE__ */ import_react3.default.createElement("form", { style: { display: "flex", alignItems: "center", justifyContent: "center", width: "100%", gap: "0.5rem" } }, /* @__PURE__ */ import_react3.default.createElement(
         "input",
         {
-          className: "flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] disabled:cursor-not-allowed disabled:opacity-50 text-[#030712] focus-visible:ring-offset-2",
+          type: "text",
           placeholder: "Type your message",
-          defaultValue: ""
+          defaultValue: "",
+          style: {
+            flex: 1,
+            height: "2.5rem",
+            borderRadius: "0.375rem",
+            border: "1px solid #e5e7eb",
+            padding: "0.5rem 0.75rem",
+            fontSize: "0.875rem",
+            color: "#030712",
+            outline: "none"
+          }
         }
-      ), /* @__PURE__ */ import_react.default.createElement("button", { className: "inline-flex items-center justify-center rounded-md text-sm font-medium text-[#f9fafb] disabled:pointer-events-none disabled:opacity-50 bg-black hover:bg-[#111827E6] h-10 px-4 py-2" }, "Send")))
-    )) : null)), /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(
+      ), /* @__PURE__ */ import_react3.default.createElement(
+        "button",
+        {
+          type: "submit",
+          style: {
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: "0.375rem",
+            fontSize: "0.875rem",
+            fontWeight: "500",
+            color: "#f9fafb",
+            backgroundColor: "#000000",
+            height: "2.5rem",
+            padding: "0 1rem",
+            border: "none",
+            cursor: "pointer"
+          }
+        },
+        "Send"
+      )))
+    )), /* @__PURE__ */ import_react3.default.createElement(
       "button",
       {
-        onClick: () => {
-          setShow((e) => !e);
+        onClick: () => setShow((e) => !e),
+        style: {
+          position: "fixed",
+          bottom: "2rem",
+          right: "2rem",
+          zIndex: 1e5,
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "4rem",
+          height: "4rem",
+          borderRadius: "9999px",
+          backgroundColor: "#000",
+          border: "1px solid #e5e7eb",
+          color: "#fff",
+          cursor: "pointer",
+          boxShadow: "0 4px 6px rgba(0,0,0,0.1)"
         },
-        className: "z-[100000] shadow-xl fixed bottom-8 right-8 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-black hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900",
-        type: "button",
         "aria-haspopup": "dialog",
-        "aria-expanded": "false",
-        "data-state": "closed"
+        "aria-expanded": show
       },
-      /* @__PURE__ */ import_react.default.createElement(
-        "svg",
-        {
-          xmlns: " http://www.w3.org/2000/svg",
-          width: 30,
-          height: 40,
-          viewBox: "0 0 24 24",
-          fill: "none",
-          stroke: "currentColor",
-          strokeWidth: 2,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
-          className: "text-white block border-gray-200 align-middle shadow-xl"
-        },
-        /* @__PURE__ */ import_react.default.createElement(
-          "path",
-          {
-            d: "m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z",
-            className: "border-gray-200"
-          }
-        )
-      )
-    )));
+      show ? /* @__PURE__ */ import_react3.default.createElement(IoMdChatbubbles, { size: 20 }) : /* @__PURE__ */ import_react3.default.createElement(CiChat2, { size: 20 })
+    ));
   }
 
   // widget.js
@@ -14058,7 +12559,7 @@
     container.id = "webopt-widget-root";
     document.body.appendChild(container);
     const root = import_client.default.createRoot(container);
-    root.render(/* @__PURE__ */ import_react3.default.createElement(MyWidget, null));
+    root.render(/* @__PURE__ */ import_react4.default.createElement(MyWidget, null));
   })();
 })();
 /*! Bundled license information:
@@ -14100,17 +12601,6 @@ react-dom/cjs/react-dom-client.production.js:
   (**
    * @license React
    * react-dom-client.production.js
-   *
-   * Copyright (c) Meta Platforms, Inc. and affiliates.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE file in the root directory of this source tree.
-   *)
-
-react/cjs/react-jsx-runtime.production.js:
-  (**
-   * @license React
-   * react-jsx-runtime.production.js
    *
    * Copyright (c) Meta Platforms, Inc. and affiliates.
    *
