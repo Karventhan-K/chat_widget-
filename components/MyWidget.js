@@ -102,7 +102,7 @@ export default function MyWidget() {
                                         </span>
                                         <p className="leading-relaxed">
                                             <span className="block font-bold text-gray-700">AI </span>Sorry, I
-                                            couldn't find any information in the documentation about that. Expect
+                                            couldn&apos;t find any information in the documentation about that. Expect
                                             answer to be less accurateI could not find the answer to this in the
                                             verified sources.
                                         </p>
