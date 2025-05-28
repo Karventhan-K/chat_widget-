@@ -76,7 +76,7 @@ export default function MyWidget() {
                 </span>
                 <p style={{ lineHeight: "1.5" }}>
                   <span style={{ display: "block", fontWeight: "bold", color: "#374151" }}>AI</span>
-                  Sorry, I couldn't find any information in the documentation about that...
+                  Sorry, I couldn&apos;t find any information in the documentation about that...
                 </p>
               </div>
             </div>
